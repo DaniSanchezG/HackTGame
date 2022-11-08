@@ -24,6 +24,79 @@
   outline: 0 none;
 }
 
+#players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  /* margin: 5% 5%; */
+}
+
+#players .players-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% auto;
+  padding: 0 5%;
+}
+
+#players .players-container .container .header{
+  width: 75%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+#players .players-container .container .header .black {
+  font-size: 2.5rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+}
+#players .players-container .container .header .yellow-text {
+  font-size: 2.5rem;
+  color: var(--yellow);
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  line-height: .5em;
+  padding-bottom: .6em;
+}
+#players .players-container .container p {
+  color: grey;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+#players .players-container .container .images {
+  width: 90%;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: center;
+  padding: 0 2%;
+}
+#players .players-container .container .images .card-img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  /* margin-left: 1em;
+  padding-bottom: 3em; */
+}
+
+#players .players-container .container .images .img-players {
+  width: 31.33%;
+  margin: 0% 3%;
+}
+#players .players-container .container .images .img-players i {
+  font-size: 2rem;
+  /* color: #0dcaf0; */
+}
+
+
+
 /* Header */
 /* Slideshow */
 /* Players */
@@ -32,28 +105,34 @@
 
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (max-width: 576px) {
+  #players .players-container .container .images .img-players {
+    width: 90%;
+  }
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+    /* #players .players-container .container .images .img-players {
+    width: 90%;
+  } */
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
