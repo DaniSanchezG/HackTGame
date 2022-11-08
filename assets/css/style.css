@@ -23,12 +23,23 @@
   box-sizing: inherit;
   outline: 0 none;
 }
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Titillium Web', sans-serif; */
 
 /* Header */
 /* Slideshow */
 /* Players */
 /* Games */
 /* Footer */
+#container-game{
+ display: flex;
+  object-position: center;   
+  height: 100%;   
+  width: 100%;  
+
+  
+}
+
 
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
@@ -37,6 +48,7 @@
 /* Slideshow */
 /* Players */
 /* Games */
+
 /* Footer */
 }
 
