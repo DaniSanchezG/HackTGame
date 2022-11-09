@@ -30,6 +30,75 @@
 
 /* Header */
 /* Slideshow */
+#slideshow {
+  position: relative;
+  width: 100vw;
+  display: flex;
+}
+
+#slideshow > div.slideText > img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+
+.scpopacity{
+  opacity: 0.1 !important;
+}
+
+#slideshow > div.slideText > h1{
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+#slideshow > div.slideText > p{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Titillium Web', sans-serif;
+  padding:1em;
+  opacity: 0;
+}
+
+
+.slideChangePoints{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:4em 3em;
+}
+
+.slideChangePoint{
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.yellowText{
+  color: var(--yellow)
+}
 /* Players */
 /* Games */
 /* Footer */
@@ -71,6 +140,21 @@
 @media (min-width: 768px) {
   /* Header */
   /* Slideshow */
+  #slideshow > div.slideText > p{
+    margin-top: 1.5em;
+    opacity: 1;
+    text-shadow: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+  }
+  
+  .slideChangePoints{
+    justify-content: space-around;
+  }
+  
+  #slideshow > div.slideText > h1{
+    font-size: 4rem;
+  }
   /* Players */
   /* Games */
   /* Footer */
@@ -80,6 +164,14 @@
 @media (min-width: 1440px) {
   /* Header */
   /* Slideshow */
+  #slideshow > div.slideText > p{
+    opacity: 1;
+    text-shadow: #000;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1em 20em;
+    font-family: 'Poppins', sans-serif;
+  }
   /* Players */
   /* Games */
   /* Footer */
