@@ -28,6 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-wrap: wrap; Dani */
   height: auto;
   width: 100%;
   /* margin: 5% 5%; */
@@ -37,8 +38,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 0 5%;
+  /* flex-direction: column; */
+  margin: 10px;/*Dani*/
+  /* width: 100%;
+  padding: 0 5%; */
 }
 
 #players .players-container .p-container .p-header {
@@ -71,7 +74,8 @@
   margin-bottom: 2em;
 }
 #players .players-container .p-container .p-images {
-  width: 90%;
+  width: 100%;
+  /* flex-direction: column; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -80,28 +84,19 @@
 }
 
 #players .players-container .p-container .p-images .img-players {
-  width: 31.33%;
-  max-width: 293px;
-  min-width: 282px;
-  margin: 0% 3%;
+  width: 100%;
+  margin: 0% 1%;
   position: relative;
+  /* transition: height 2s;
+  transition-timing-function: ease; */
 }
 
 #players .players-container .p-container .p-images .img-players .card-img {
   object-fit: cover;
   object-position: center;
-  height: 100%;
-  width: 100%;
+  height: 95%;
+  width: 95%;
 }
-
-/* #players
-  .players-container
-  .p-container
-  .p-images
-  .img-players
-  .p-participants {
-  position: relative;
-} */
 
 #players
   .players-container
@@ -121,7 +116,7 @@
   line-height: 1.2em;
   position: absolute;
   top: 70%;
-  left: 22%;
+  left: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,10 +128,23 @@
   opacity: 1;
   position: absolute;
   top: 50%;
-  left: 43%;
-  /* transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
+
+#players .players-container .p-container .p-images .img-players i:hover{
+  color: white;
+}
+
+/* #players .players-container .p-container .p-images .img-players:hover .card-img{
+  opacity: 0.5;
+  height: 100%;
+  bottom: 0;
+} */
+/* #players .players-container .p-container .p-images .img-players:hover button {
+  opacity: 0;
+} */
 
 /* Header */
 /* Slideshow */
@@ -146,8 +154,8 @@
 
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-
+@media (min-width: 576px) {
+  
   /* Header */
   /* Slideshow */
   /* Players */
@@ -156,11 +164,35 @@
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   #players .players-container .p-container .p-images .img-players {
-  width: 25%;
-  min-width: 150px;
+    width: 31.33%;
+    margin: 0% 1%;
+    position: relative;
+    /* transition: height 2s;
+    transition-timing-function: ease; */
   }
+  /* .p-images{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+  } */
+  /* #players .players-container .p-container .p-images .img-players {
+  width: 25%;
+  min-width: 150px
+  } */
+  /* #players
+  .players-container
+  .p-container
+  .p-images
+  .img-players
+  .p-participants
+  .participants{
+    max-width: 60px;
+  } */
   /* Header */
   /* Slideshow */
   /* Players */
@@ -169,7 +201,23 @@
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
+  #players .players-container .p-container .p-images .img-players {
+    width: 31.33%;
+    margin: 0% 1%;
+    position: relative;
+    /* transition: height 2s;
+    transition-timing-function: ease; */
+  }
+  /* @media (min-width: 1440px) {
+    .p-images{
+      width: 100%;
+      flex-direction: row;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 200px;
+    } */
   /* Header */
   /* Slideshow */
   /* Players */
