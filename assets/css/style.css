@@ -10,6 +10,7 @@
   --teal: #20c997;
   --cyan: #0dcaf0;
   --black: #000;
+  --dark: #292a2b;
   box-sizing: border-box;
   font-size: 0.875rem;
 }
@@ -24,23 +25,202 @@
   outline: 0 none;
 }
 
+/* Header */
+/* header logo */
+#header {
+  color: var(--black);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  font-size: 2.875rem;
+  margin: 5%;
+}
+
+#header h1 #yellowText {
+  color: var(--yellow);
+}
+
+/* header menu icon */
+
+#header #square {
+  background-color: var(--black);
+  padding: 1.2em;
+  border-radius: .5rem;
+  margin: 5%;
+  opacity: 1;
+}
+
+#header #square img {
+  width: 30px;
+}
+
+/* sidebar */
+
+#sidebar {
+  background-color: var(--dark);
+  color: white;
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+/* sidebar links */
+
+#sidebar nav li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  border-bottom: 1px solid white;
+  margin-left: 1.2em;
+  margin-right: 2em;
+  list-style: none;
+  font-size: 1.1rem;
+  margin-top: 3em;
+}
+#sidebar nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+#sidebar nav li a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+/* sidebar close icon */
+
+#sidebar nav img {
+  width: 20px;
+  position: absolute;
+  top: 2em;
+  right: 3em;
+}
+
+/* sidebar social networks icons */
+
+#sidebar .social-networks {
+ width: 80%;
+ margin: 15% 10%;
+}
+
+#sidebar .social-networks .fa-brands:not(:last-of-type) {
+  margin-right: 0.9em;
+}
+
+#sidebar .social-networks .fa-brands:first-of-type {
+  margin-left: 0.8em;
+}
+
+#sidebar .social-networks .fa-brands:hover {
+  color: var(--yellow);
+}
+
+/* sidebar buttons */
+
+#sidebar .buttons {
+  margin-left: 1.2em;
+  width: 85%;
+  display: inline-flex;
+  position: relative;
+  vertical-align: middle;
+}
+
+#sidebar button {
+  width: 50%;
+  background-color: var(--yellow);
+  padding: 0.8em;
+}
+
+#sidebar button a {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#sidebar button a:hover {
+  color: var(--black);
+}
+
+/* Slideshow */
+/* Players */
+/* Games */
+/* Footer */
+
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  /* Header */
+  #sidebar .social-networks {
+    margin: 10% 10%;
+   }
+   
+  #sidebar .social-networks .fa-brands:not(:last-of-type) {
+     margin-right: 2em;
+   }
+  
+  #sidebar .buttons {
+    width: 90%;
+  }
+
+/* Slideshow */
+/* Players */
+/* Games */
+/* Footer */
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-}
+  /* Header */
+  #sidebar .social-networks {
+    margin: 5% 10%;
+   }
+   
+   #sidebar .social-networks .fa-brands:not(:last-of-type) {
+     margin-right: 3em;
+   }
+   
+   #sidebar .social-networks .fa-brands:first-of-type {
+     margin-left: 2em;
+   }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
+  #sidebar nav img {
+    width: 20px;
+    position: absolute;
+    top: 3.5em;
+    right: 3em;
+  }
 
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+  #sidebar nav li:first-of-type{
+    margin-right: 5em;
+  }
+
+  #sidebar nav li:last-of-type{
+    margin-bottom: 2.5em;
+  }
+/* Slideshow */
+/* Players */
+/* Games */
+/* Footer */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
+  /* Header */
+  #header #square {
+    opacity: 0;
+  }
+/* Slideshow */
+/* Players */
+/* Games */
+/* Footer */
 }
