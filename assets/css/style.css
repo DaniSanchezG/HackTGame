@@ -1,17 +1,11 @@
 :root {
-  --blue: #0d6efd;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #d63384;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #198754;
-  --teal: #20c997;
-  --cyan: #0dcaf0;
-  --black: #000;
+  --yellow: #ffc311;
+  --grey: #fcfcfd;
+  --dark: #181818;
+  --lightblack: #747474;
   box-sizing: border-box;
   font-size: 0.875rem;
+  font-family: "Poppins", sans-serif;
 }
 
 *,
@@ -23,49 +17,132 @@
   box-sizing: inherit;
   outline: 0 none;
 }
-/* font-family: 'Poppins', sans-serif;
-font-family: 'Titillium Web', sans-serif; */
 
 /* Header */
 /* Slideshow */
 /* Players */
 /* Games */
 /* Footer */
-#container-game{
- display: flex;
-  object-position: center;   
-  height: 100%;   
-  width: 100%;  
-
-  
+#container-game {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-color: var(--grey);
 }
-
+#game-title h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 3.15rem;
+}
+#game-title h1 span {
+  color: var(--yellow);
+}
+#game-title p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+  color: var(--lightblack);
+}
+#carts {
+  width: 100%;
+  box-shadow: 20px 20px 50px grey;
+}
+.game-cart {
+  width: 100%;
+  
+  /* justify-content:space-around; */
+  margin-bottom: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.game-cart h2 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 1.71rem;
+  padding: 0.4em 0.4em;
+  color: var(--dark);
+}
+.game-cart h2:hover {
+  color: var(--yellow);
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.game-cart .fa-display {
+  font-size: 1rem;
+  padding-left: 0.8rem;
+  padding-bottom: 1rem;
+  color: var(--dark);
+}
+.game-cart span {
+  font-weight: 900;
+  font-size: 0.65rem;
+  padding: 0.2em 0.4em;
+  color: var(--lightblack);
+}
+.game-cart span:hover {
+  color: var(--yellow);
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.game-cart p {
+  padding: 0.2em 0.4em;
+  color: var(--lightblack);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+}
+.game-cart img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
 
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .game-cart {
+    width: 31.33%;
+    box-shadow: 20px 20px 50px grey;
+    /* justify-content:space-around; */
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1440px) {
+  .game-cart {
+    width: 31.33%;
+    box-shadow: 20px 20px 50px grey;
+    /* justify-content:space-around; */
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
