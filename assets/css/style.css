@@ -24,30 +24,20 @@
   outline: 0 none;
 }
 
-#players {
+#players{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: auto;
-  width: 100%;
-  /* margin: 5% 5%; */
-}
-
-#players .players-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0 5%;
 }
 
 #players .players-container .p-container .p-header {
   width: 75%;
   display: block;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   margin-bottom: 1em;
-  margin-left: 1em;
+  margin-left: -5em;
 }
 
 #players .players-container .p-container .p-header .p-black {
@@ -70,72 +60,56 @@
   line-height: 1.2em;
   margin-bottom: 2em;
 }
-#players .players-container .p-container .p-images {
-  width: 90%;
+
+.p-container{
+  margin: 10px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 0 2%; */
 }
 
-#players .players-container .p-container .p-images .img-players {
-  width: 31.33%;
-  max-width: 293px;
-  min-width: 282px;
-  margin: 0% 3%;
-  position: relative;
+.p-images{
+  width: 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
 }
 
-#players .players-container .p-container .p-images .img-players .card-img {
-  object-fit: cover;
-  object-position: center;
-  height: 100%;
+.card-img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* #players
-  .players-container
-  .p-container
-  .p-images
-  .img-players
-  .p-participants {
+.img-players{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: relative;
-} */
+  min-width: 240px;
+  margin-bottom: 2em;
+}
 
-#players
-  .players-container
-  .p-container
-  .p-images
-  .img-players
-  .p-participants
-  .participants {
-  width: 8em;
-  height: 2.5em;
+.p-iconsAndText{
+  position: absolute;
+  left: 40%;
+  top: 45%;
+  font-size: 5rem;
+  color: aliceblue;
+}
+
+.participants{
+  font-size: 2rem;
+  margin-left: -1.3em;
   background-color: var(--yellow);
-  color: var(--black);
-  text-align: center;
+  padding: 0.5em;
+  color: black;
+  margin-top: .2em;
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
-  font-size: 1.5rem;
-  line-height: 1.2em;
-  position: absolute;
-  top: 70%;
-  left: 22%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#players .players-container .p-container .p-images .img-players i {
-  font-size: 3rem;
-  color: var(--yellow);
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 43%;
-  /* transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); */
 }
 
 /* Header */
@@ -146,7 +120,7 @@
 
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+@media (min-width: 576px) {
 
   /* Header */
   /* Slideshow */
@@ -156,23 +130,83 @@
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-  #players .players-container .p-container .p-images .img-players {
-  width: 25%;
-  min-width: 150px;
-  }
+@media (min-width: 768px) {
+
   /* Header */
   /* Slideshow */
   /* Players */
+.p-images{
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1em;
+}
+
+.card-img{
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.p-iconsAndText{
+  left: 40%;
+  top: 45%;
+  font-size: 2rem;
+}
+
+.participants{
+  font-size: 1.2rem;
+  margin-left: -3.5em;
+  background-color: var(--yellow);
+  padding: 0.5em 2em;
+  color: black;
+  margin-top: .8em;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+}
+#players > div > div > div.p-header{
+  margin-left: -8em !important;
+}
+
+
   /* Games */
   /* Footer */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
   /* Header */
   /* Slideshow */
   /* Players */
+  .card-img{
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .p-iconsAndText{
+    left: 40%;
+    top: 45%;
+    font-size: 4em;
+  }
+  
+  .participants{
+    font-size: 1.6rem !important;
+    background-color: var(--yellow);
+    padding: 0.5em;
+    color: black;
+    margin-top: .2em;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    margin-left: 1em;
+    margin-left: -1.5em;
+  }
+
+  #players > div > div > div.p-header{
+    margin-left: -14em !important;
+  }
   /* Games */
   /* Footer */
 }
