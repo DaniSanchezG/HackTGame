@@ -27,7 +27,7 @@
 
 /* Header */
 /* header logo */
-#header {
+#mobile-header {
   color: var(--black);
   background-color: white;
   display: flex;
@@ -35,14 +35,14 @@
   justify-content: space-between;
 }
 
-#header h1 {
+#mobile-header h1 {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 900;
   font-size: 2.875rem;
   margin: 5%;
 }
 
-#header h1 #yellowText {
+#mobile-header h1 #tgame {
   color: var(--yellow);
 }
 
@@ -138,17 +138,61 @@
   width: 50%;
   background-color: var(--yellow);
   padding: 0.8em;
-}
-
-#sidebar button a {
   color: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  text-decoration: none;
 }
 
-#sidebar button a:hover {
+#sidebar button:first-child {
+  border-right: solid rgb(205, 201, 201) 0.3px;
+  /* border-right: solid var(--dark) 0.5px; */
+}
+
+#sidebar button:hover {
   color: var(--black);
+}
+
+/* Login */
+
+
+/* Sign up */
+#sign-up {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  top: 0;
+  background-color: white;
+  display: none;
+}
+
+#sign-up .close-modal {
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  padding: 1em;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#sign-up #modalSignUp {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  font-size: 4.575rem;
+  text-align: center;
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+#sign-up p {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #8d8682;
+  font-size: 1.5rem;
 }
 
 /* Slideshow */
@@ -183,15 +227,15 @@
   /* Header */
   #sidebar .social-networks {
     margin: 5% 10%;
-   }
+  }
    
-   #sidebar .social-networks .fa-brands:not(:last-of-type) {
+  #sidebar .social-networks .fa-brands:not(:last-of-type) {
      margin-right: 3em;
-   }
+  }
    
-   #sidebar .social-networks .fa-brands:first-of-type {
+  #sidebar .social-networks .fa-brands:first-of-type {
      margin-left: 2em;
-   }
+  }
 
   #sidebar nav img {
     width: 20px;
@@ -218,9 +262,10 @@
   /* Header */
   #header #square {
     opacity: 0;
-  }
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+    }
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
+

@@ -14,36 +14,69 @@
   <body>
     <!-- Menu -->
     <section id="header">
-      <h1>Hack<span id="yellowText">TGame</span></h1>
-      <div id="square">
-        <img src="assets/img/menu.png" alt="menu">
+      <div>
+        <div id="mobile-header">
+          <h1>Hack<span id="tgame">TGame</span></h1>
+          <div id="square">
+            <img src="assets/img/menu.png" alt="menu">
+          </div>
+        </div>
+      </div>
+      <div class="desktop-menu">
+        <div id="sidebar">
+          <nav>
+            <img src="assets/img/close.png" alt="close" class="close">
+            <div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">eSports</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="social-networks">
+              <i class="fa-brands fa-twitter fa-lg"></i>
+              <i class="fa-brands fa-twitch fa-lg"></i>
+              <i class="fa-brands fa-facebook-f fa-lg"></i>
+              <i class="fa-brands fa-instagram fa-lg"></i>
+              <i class="fa-brands fa-youtube fa-lg"></i>
+            </div>
+            <div class="buttons">
+              <button id="btnlogin">LOGIN</button>
+              <button id="btnsingup">SIGN UP</button>
+            </div>
+          </nav>
+        </div>
       </div>
     </section>
-    <!-- modal sidebar menu -->
-    <div id="sidebar">
-      <nav>
-        <img src="assets/img/close.png" alt="close" class="close">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">eSports</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="social-networks">
-          <i class="fa-brands fa-twitter fa-lg"></i>
-          <i class="fa-brands fa-twitch fa-lg"></i>
-          <i class="fa-brands fa-facebook fa-lg"></i>
-          <i class="fa-brands fa-instagram fa-lg"></i>
-          <i class="fa-brands fa-youtube fa-lg"></i>
-        </div>
-        <div class="buttons">
-          <button><a href="#">LOGIN</a></button>
-          <button><a href="#">SIGN UP</a></button>
-        </div>
-      </nav>
-    </div>
     
+    <!-- modal window login -->
+    <!-- <div class="modal" id="modalAdd">
+      <div class="modal-container">
+        <div class="close-modal"><i class="fa-solid fa-xmark fa-lg"></i></div>
+        <h1 id="modalLogin">LOGIN</h1>
+        <form action="">
+          <input type="text" name="username" id="username" placeholder="Username"/>
+          <input type="password" placeholder="Password" id="password"/>
+          <input class="check" type="checkbox" id="checkbox"/>Remember Me
+          <input type="submit" value="SIGN IN"/>
+        </form>
+        <div class="login-links">
+          <p>Lost Password?</p>
+          <p>Create an Account</p>
+        </div>
+      </div>
+    </div>  -->
+
+    <!-- modal window sign up -->
+    <div id="sign-up">
+      <div class="close-modal"><i class="fa-solid fa-xmark fa-lg"></i></div>
+      <h1 id="modalSignUp">SIGN UP</h1>
+      <p>New membership are not allowed.</p>
+    </div>
+
+
     <!-- Slideshow -->
     <!-- Players -->
     <!-- Games -->
