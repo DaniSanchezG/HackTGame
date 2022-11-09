@@ -68,6 +68,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   line-height: 1.2em;
+  margin-bottom: 2em;
 }
 #players .players-container .p-container .p-images {
   width: 90%;
@@ -80,7 +81,9 @@
 
 #players .players-container .p-container .p-images .img-players {
   width: 31.33%;
-  /* margin: 0% 3%; */
+  max-width: 293px;
+  min-width: 282px;
+  margin: 0% 3%;
   position: relative;
 }
 
@@ -117,15 +120,22 @@
   font-size: 1.5rem;
   line-height: 1.2em;
   position: absolute;
-  top: 15em;
-  right: 2.5em;
+  top: 70%;
+  left: 22%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #players .players-container .p-container .p-images .img-players i {
-  font-size: 2rem;
+  font-size: 3rem;
+  color: var(--yellow);
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
 }
 
 /* Header */
@@ -137,9 +147,7 @@
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-  #players .players-container .p-container .p-images .img-players {
-    width: 90%;
-  }
+
   /* Header */
   /* Slideshow */
   /* Players */
@@ -149,9 +157,10 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-  /* #players .players-container .container .images .img-players {
-    width: 90%;
-  } */
+  #players .players-container .p-container .p-images .img-players {
+  width: 25%;
+  min-width: 150px;
+  }
   /* Header */
   /* Slideshow */
   /* Players */
