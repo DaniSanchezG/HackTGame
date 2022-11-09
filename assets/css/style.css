@@ -38,26 +38,49 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
+  #footer {
+    background-color: black;
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+
+  #footer h3 {
+    font-family: "Titillium Web", sans-serif;
+  }
+
+  #footer p {
+    font-family: "Poppins", sans-serif;
+  }
+
+  #footer span,
+  #footer a {
+    color: rgb(255, 195, 17);
+  }
+
+  #footer i{
+  color: white;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1440px) {
   /* Header */
-/* Slideshow */
-/* Players */
-/* Games */
-/* Footer */
+  /* Slideshow */
+  /* Players */
+  /* Games */
+  /* Footer */
 }
