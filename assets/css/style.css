@@ -23,152 +23,146 @@
   box-sizing: inherit;
   outline: 0 none;
 }
-
-#players{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-#players .players-container .p-container .p-header {
-  width: 75%;
-  display: block;
-  justify-content: left;
-  align-items: left;
-  margin-bottom: 1em;
-  margin-left: -5em;
-}
-
-#players .players-container .p-container .p-header .p-black {
-  font-size: 2.5rem;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
-}
-#players .players-container .p-container .p-header .p-yellow-text {
-  font-size: 2.5rem;
-  color: var(--yellow);
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
-  line-height: 0.5em;
-  padding-bottom: 0.5em;
-}
-#players .players-container .p-container .lorem {
-  color: grey;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  line-height: 1.2em;
-  margin-bottom: 2em;
-}
-
-.p-container{
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.p-images{
-  width: 90%;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 200px;
-}
-
-.card-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.img-players{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  min-width: 240px;
-  margin-bottom: 2em;
-}
-
-.p-iconsAndText{
-  position: absolute;
-  left: 40%;
-  top: 45%;
-  font-size: 5rem;
-  color: aliceblue;
-}
-
-.participants{
-  font-size: 2rem;
-  margin-left: -1.3em;
-  background-color: var(--yellow);
-  padding: 0.5em;
-  color: black;
-  margin-top: .2em;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
-}
-
 /* Header */
 /* Slideshow */
 /* Players */
+#players {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#players .playerContainer {
+  position: relative;
+}
+.playerContainer {
+  margin: 2em 0;
+}
+.itemsPlayerContainer {
+  position: absolute;
+  margin-top: 60%;
+  margin-left: 25%;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.itemsPlayerContainer i {
+  font-size: 4rem;
+}
+
+.itemsPlayerContainer h3 {
+  font-size: 2rem;
+  background-color: var(--yellow);
+  padding: 0.5em 1.5em;
+  margin-top: 1em;
+  color: var(--black);
+  font-family: "Titillium Web", sans-serif;
+}
+
+div.playerContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-box-shadow: 21px 54px 169px -50px rgba(0,0,0,0.75);
+  -moz-box-shadow: 21px 54px 169px -50px rgba(0,0,0,0.75);
+  box-shadow: 21px 54px 169px -50px rgba(0,0,0,0.75);
+}
+
+#divPlayer1,
+#divPlayer2,
+#divPlayer3 {
+  width: 90%;
+}
 /* Games */
 /* Footer */
 
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
   /* Header */
   /* Slideshow */
   /* Players */
+  .itemsPlayerContainer {
+  position: absolute;
+  margin-top: 60%;
+  margin-left: 25%;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.itemsPlayerContainer i {
+  font-size: 4rem;
+}
+
+.itemsPlayerContainer h3 {
+  font-size: 2rem;
+  background-color: var(--yellow);
+  padding: 1em 3.5em;
+  margin-top: 1em;
+  color: var(--black);
+  font-family: "Titillium Web", sans-serif;
+}
   /* Games */
   /* Footer */
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  #divPlayer1,
+  #divPlayer2,
+  #divPlayer3 {
+    width: 28%;
+  }
   /* Header */
   /* Slideshow */
   /* Players */
-.p-images{
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 1em;
-}
+  #players {
+    flex-direction: row;
+  }
 
-.card-img{
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.p-iconsAndText{
-  left: 40%;
-  top: 45%;
-  font-size: 2rem;
-}
-
-.participants{
-  font-size: 1.2rem;
-  margin-left: -3.5em;
-  background-color: var(--yellow);
-  padding: 0.5em 2em;
-  color: black;
-  margin-top: .8em;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
-}
-#players > div > div > div.p-header{
-  margin-left: -8em !important;
-}
-
-
+  div.playerContainer > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 21px 54px 169px -50px rgba(0,0,0,0.75);
+    -moz-box-shadow: 21px 54px 169px -50px rgba(0,0,0,0.75);
+    box-shadow: 21px 54px 169px -50px rgba(0,0,0,0.75);
+  }
+  .itemsPlayerContainer {
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 25%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+  
+  .itemsPlayerContainer i {
+    font-size: 3rem;
+  }
+  
+  .itemsPlayerContainer h3 {
+    font-size: .8rem;
+    background-color: var(--yellow);
+    padding: 1em 3.5em;
+    margin-top: 1em;
+    color: var(--black);
+    font-family: "Titillium Web", sans-serif;
+  }
   /* Games */
   /* Footer */
 }
@@ -178,34 +172,27 @@
   /* Header */
   /* Slideshow */
   /* Players */
-  .card-img{
-    width: 95%;
-    height: 95%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .p-iconsAndText{
-    left: 40%;
-    top: 45%;
-    font-size: 4em;
-  }
-  
-  .participants{
-    font-size: 1.6rem !important;
-    background-color: var(--yellow);
-    padding: 0.5em;
-    color: black;
-    margin-top: .2em;
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 900;
-    text-align: center;
-    margin-left: 1em;
-    margin-left: -1.5em;
+  #players {
+    flex-direction: row;
   }
 
-  #players > div > div > div.p-header{
-    margin-left: -14em !important;
+  .itemsPlayerContainer{
+    top:50%;
+    left: 25%;
+    margin-left: -2em;
+  }
+
+  .itemsPlayerContainer i {
+    font-size: 5rem;
+  }
+  
+  .itemsPlayerContainer h3 {
+    font-size: 1.5rem;
+    background-color: var(--yellow);
+    padding: 1em 5em;
+    margin-top: 3em;
+    color: var(--black);
+    font-family: "Titillium Web", sans-serif;
   }
   /* Games */
   /* Footer */
