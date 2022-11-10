@@ -17,21 +17,20 @@
   box-sizing: inherit;
   outline: 0 none;
 }
-
-/* Header */
-/* Slideshow */
-/* Players */
 /* Games */
-/* Footer */
+
 #container-game {
   font-family: "Poppins", sans-serif;
   width: 100%;
   background-color: var(--grey);
+  padding: 1em 1em;
+  /* color: var(--dark); */
 }
 #game-title h1 {
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
-  font-size: 3.15rem;
+  /* font-size: 3.15rem; */
+  font-size: 3.37rem;
 }
 #game-title h1 span {
   color: var(--yellow);
@@ -45,16 +44,13 @@
 #carts {
   width: 100%;
   box-shadow: 20px 20px 50px grey;
+  flex-direction: column;
+  display: flex;
+
 }
 .game-cart {
   width: 100%;
   
-  /* justify-content:space-around; */
-  margin-bottom: 4rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 .game-cart h2 {
   font-family: "Titillium Web", sans-serif;
@@ -107,42 +103,43 @@
   /* Players */
   /* Games */
   /* Footer */
+  
+    
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .game-cart {
-    width: 31.33%;
+  #carts {
+    width: 100%;
     box-shadow: 20px 20px 50px grey;
     /* justify-content:space-around; */
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
   }
-  /* Header */
-  /* Slideshow */
-  /* Players */
-  /* Games */
-  /* Footer */
+  .game-cart{
+    width: 30%;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1440px) {
-  .game-cart {
-    width: 31.33%;
+  #carts {
+    width: 100%;
     box-shadow: 20px 20px 50px grey;
-    /* justify-content:space-around; */
-    margin-bottom: 4rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* flex-direction: row; */
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  /* Header */
-  /* Slideshow */
-  /* Players */
-  /* Games */
-  /* Footer */
+  .game-cart{
+    width: 30%;
+  }
 }
