@@ -288,7 +288,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1em;
-  margin-left: 1em;
+  margin-left: 2.3em;
 }
 
 #players .players-container .p-container .p-header .p-black {
@@ -317,10 +317,11 @@
   justify-content: center;
   align-items: center;
   padding: 0 1%;
+  margin-left: 1em;
 }
 
 #players .players-container .p-container .p-images .img-players {
-  width: 100%;
+  width: 95%;
   margin: 5% 1%;
   position: relative;
 }
@@ -383,16 +384,20 @@
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
   /* font-size: 3.15rem; */
-  font-size: 3.37rem;
+  font-size: 2.5rem;
+  margin-left: .7em;
 }
 #game-title h1 span {
   color: var(--yellow);
 }
 #game-title p {
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-bottom: 2rem;
-  color: var(--lightblack);
+  color: grey;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0 1.8em;
 }
 #carts {
   width: 95%;
@@ -401,7 +406,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin: 0 auto;
 }
 .game-cart {
   width: 95%;
@@ -455,7 +460,30 @@
   margin-bottom: 2em;
 }
 /* Footer */
+#footer {
+  background-color: black;
+  color: white;
+  position: relative;
+  text-align: center;
+  padding: 1em;
+}
 
+#footer h3 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+#footer p {
+  font-family: "Poppins", sans-serif;
+}
+
+#footer span,
+#footer a {
+  color: rgb(255, 195, 17);
+}
+
+#footer i {
+  color: white;
+}
 /* / Bootstrap breakpoints / */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -542,29 +570,7 @@
     color: var(--yellow);
   }
   /* footer */
-  #footer {
-    background-color: black;
-    color: white;
-    position: relative;
-    text-align: center;
-  }
 
-  #footer h3 {
-    font-family: "Titillium Web", sans-serif;
-  }
-
-  #footer p {
-    font-family: "Poppins", sans-serif;
-  }
-
-  #footer span,
-  #footer a {
-    color: rgb(255, 195, 17);
-  }
-
-  #footer i {
-    color: white;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -616,6 +622,16 @@
     position: relative;
     /* max-width: 1440px; */
   }
+
+  #players > div > div > div.p-header{
+    /* margin-left: 3em !important; */
+    /* margin-top: 3em !important; */
+  }
+
+  #players > div > div > div.p-images > div > div > p{
+    font-size: 1em !important;
+  }
+
   /* games */
   #carts {
     width: 95%;
@@ -635,7 +651,15 @@
   .game-cart{
     width: 30%;
   }
+
+  #game-title p {
+    margin-right: 15em;
+  }
   /* footer */
+  #footer {
+    padding: 2em;
+    font-size: 1.4rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -686,9 +710,21 @@
     margin: 5% 1%;
     position: relative;
   }
+  #players > div > div > div.p-header{
+    margin-left: 3em !important;
+    margin-top: 3em !important;
+  }
+
+  #players > div > div > div.p-images > div > div > p{
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.5em !important;
+    font-size: 2rem !important;
+    left:15% !important;
+  }
   /* games */
   #carts {
-    width: 100%;
+    width: 97%;
     /* box-shadow: 20px 20px 50px grey; */
     /* flex-direction: row; */
     align-items: center;
@@ -698,5 +734,15 @@
   }
   .game-cart{
     width: 30%;
+  }
+
+  #game-title{
+    margin: 3em 1em;
+  }
+
+  /* footer */
+  #footer {
+    padding: 2em;
+    font-size: 1.8rem;
   }
 }
