@@ -60,6 +60,10 @@
   width: 30px;
 }
 
+.desktop-view {
+  opacity: 0;
+}
+
 /* sidebar */
 
 #sidebar {
@@ -110,14 +114,9 @@
 #sidebar .social-networks {
  width: 80%;
  margin: 15% 10%;
-}
-
-#sidebar .social-networks .fa-brands:not(:last-of-type) {
-  margin-right: 0.9em;
-}
-
-#sidebar .social-networks .fa-brands:first-of-type {
-  margin-left: 0.8em;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
 }
 
 #sidebar .social-networks .fa-brands:hover {
@@ -145,17 +144,96 @@
 
 #sidebar button:first-child {
   border-right: solid rgb(205, 201, 201) 0.3px;
-  /* border-right: solid var(--dark) 0.5px; */
 }
 
 #sidebar button:hover {
   color: var(--black);
 }
 
-/* Login */
+ /* FORMULARIO */
+
+ form {
+  text-align: center;
+}
+
+#username,
+#password {
+  padding: 1em 1em;
+  margin-bottom: 1em;
+  padding-right: 15em;
+  border: solid 1px rgb(237, 231, 231);
+  border-radius: 0.1em;
+  width: 80%;
+}
+
+#btn-sign-up {
+  background-color: var(--yellow);
+  padding: 1em 2em;
+  color: white;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+}
+
+.check {
+  border-color: #0dcaf0;
+  border: solid 2px black;
+  margin-top: 2em;
+}
+
+#modalAdd p {
+  display: inline-flex;
+}
+
+#modalAdd p:nth-child(2) {
+  margin-left: 5em;
+}
 
 
-/* Sign up */
+
+/* VENTANA MODAL-LOGIN */
+.opacity {
+  display: none;
+}
+
+#modalLogin {
+  color: rgb(16, 16, 16);
+  padding-top: 3em;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3.25rem;
+  margin-bottom: 0.7em;
+}
+
+#modalAdd {
+  background-color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  top: 0;
+  background-color: white;
+}
+
+.close-modal {
+  display: flex;
+  background-color: rgb(37, 36, 36);
+  width: 36px;
+  height: 36px;
+  float: right;
+}
+.close-modal i {
+  color: white;
+  padding-top: 0.7em;
+  padding-left: 0.9em;
+  position: absolute;
+}
+
+
+/* VENTANA MODAL-SING-UP */
 #sign-up {
   width: 100vw;
   height: 100vh;
@@ -164,35 +242,19 @@
   overflow: hidden;
   top: 0;
   background-color: white;
-  display: none;
-}
-
-#sign-up .close-modal {
-  border: 1px solid black;
-  color: white;
-  background-color: black;
-  padding: 1em;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-#sign-up #modalSignUp {
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: 900;
-  font-size: 4.575rem;
   text-align: center;
-  margin-top: 0.4em;
-  margin-bottom: 0.8em;
+  /* display: none;  */
 }
-
+#modalSignUp {
+  color: rgb(16, 16, 16);
+  padding-top: 3em;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3.25rem;
+  margin-bottom: 0.7em;
+}
 #sign-up p {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  color: #8d8682;
-  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
 }
 
 /* Slideshow */
@@ -204,14 +266,6 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* Header */
-  #sidebar .social-networks {
-    margin: 10% 10%;
-   }
-   
-  #sidebar .social-networks .fa-brands:not(:last-of-type) {
-     margin-right: 2em;
-   }
-  
   #sidebar .buttons {
     width: 90%;
   }
@@ -228,14 +282,6 @@
   #sidebar .social-networks {
     margin: 5% 10%;
   }
-   
-  #sidebar .social-networks .fa-brands:not(:last-of-type) {
-     margin-right: 3em;
-  }
-   
-  #sidebar .social-networks .fa-brands:first-of-type {
-     margin-left: 2em;
-  }
 
   #sidebar nav img {
     width: 20px;
@@ -251,6 +297,15 @@
   #sidebar nav li:last-of-type{
     margin-bottom: 2.5em;
   }
+
+  #username,
+  #password {
+  width: auto;
+  }
+
+  #modalAdd p:nth-child(2) {
+    margin-left: 5em;
+  }
 /* Slideshow */
 /* Players */
 /* Games */
@@ -260,12 +315,142 @@
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1440px) {
   /* Header */
+
+  /* OCULTAR IMG DEL MENU MOBILE */
+
   #header #square {
-    opacity: 0;
-    }
+    display: none;
+  }
+
+  #sidebar nav img {
+    display: none;
+  }
+
+  #header {
+    display: none;
+  }
+
+  /* TITULO */
+  #desktop-header h1 {
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 2.375rem;
+    margin: 5%;
+  }
+  #desktop-header span {
+    color: var(--yellow);
+  }
+
+  .desktop-view {
+    opacity: 1;
+  }
+
+  /* MENU DERECHO */
+
+  .desktop nav {
+    display: flex;
+    width: 30vw;
+    flex-wrap: wrap-reverse;
+  }
+
+  .desktop-view {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 4em;
+  }
+
+  /* LISTA */
+  .desktop ul {
+    display: flex;
+    width: 30vw;
+    justify-content: space-around;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+
+  /* BOTONES  */
+  .desktop .buttons {
+    display: flex;
+    width: 15vw;
+    justify-content: right;
+    padding: 1.5em 0.5em;
+    padding-left: 5em;
+  }
+  .desktop button:hover {
+    color: rgb(25, 14, 14);
+    font-weight: bold;
+  }
+
+  .desktop button {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: var(--yellow);
+    padding: 0.6em 0.5em;
+    width: 15vw;
+  }
+
+  .desktop #btnlogin1 {
+    border-top-left-radius: 1.2em;
+    border-bottom-left-radius: 1.2em;
+    border-right: solid rgb(205, 201, 201) 0.5px;
+  }
+  .desktop #btnsignup1 {
+    border-top-right-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
+  }
+
+  /* SOCIAL NETWORKS */
+  .desktop .social-networks {
+    display: flex;
+    width: 15vw;
+    padding-left: 2.5em;
+    margin-top: 2em;
+    font-size: 20px;
+  }
+
+  .desktop i {
+    padding-right: 1.1em;
+    color: white;
+  }
+  .desktop i:hover {
+    color: var(--yellow);
+  }
+
+  /* ENLACES */
+  .desktop a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .desktop a:hover {
+    color: var(--yellow);
+  }
+
+  #username,
+  #password {
+  width: auto;
+}
+
+#btn-sign-up {
+  padding: 1em 2em;
+  margin: 2em 2em;
+  margin-right: 24em;
+}
+
+#modalAdd p:nth-child(2) {
+  margin-left: 5em;
+}
+
+}
+  
+
+  
+
   /* Slideshow */
   /* Players */
   /* Games */
   /* Footer */
-}
+
 
