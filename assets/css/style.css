@@ -29,6 +29,10 @@
 
 /* Header */
 /* header logo */
+
+.desktop{
+  display: none;
+}
 #mobile-header {
   color: var(--black);
   background-color: white;
@@ -38,7 +42,7 @@
 }
 
 #mobile-header h1 {
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-weight: 900;
   font-size: 2.875rem;
   margin: 5%;
@@ -53,13 +57,17 @@
 #header #square {
   background-color: var(--black);
   padding: 1.2em;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   margin: 5%;
   opacity: 1;
 }
 
 #header #square img {
   width: 30px;
+}
+
+.desktop-view {
+  opacity: 0;
 }
 
 /* sidebar */
@@ -79,7 +87,7 @@
 /* sidebar links */
 
 #sidebar nav li {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   border-bottom: 1px solid white;
   margin-left: 1.2em;
@@ -110,16 +118,11 @@
 /* sidebar social networks icons */
 
 #sidebar .social-networks {
-  width: 80%;
-  margin: 15% 10%;
-}
-
-#sidebar .social-networks .fa-brands:not(:last-of-type) {
-  margin-right: 0.9em;
-}
-
-#sidebar .social-networks .fa-brands:first-of-type {
-  margin-left: 0.8em;
+ width: 80%;
+ margin: 15% 10%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
 }
 
 #sidebar .social-networks .fa-brands:hover {
@@ -141,22 +144,102 @@
   background-color: var(--yellow);
   padding: 0.8em;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
 #sidebar button:first-child {
   border-right: solid rgb(205, 201, 201) 0.3px;
-  /* border-right: solid var(--dark) 0.5px; */
 }
 
 #sidebar button:hover {
   color: var(--black);
 }
 
-/* Login */
+ /* FORMULARIO */
 
-/* Sign up */
+ form {
+  text-align: center;
+}
+
+#username,
+#password {
+  padding: 1em 1em;
+  margin-bottom: 1em;
+  padding-right: 15em;
+  border: solid 1px rgb(237, 231, 231);
+  border-radius: 0.1em;
+  width: 80%;
+}
+
+#btn-sign-up {
+  background-color: var(--yellow);
+  padding: 1em 2em;
+  color: white;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+}
+
+.check {
+  border-color: #0dcaf0;
+  border: solid 2px black;
+  margin-top: 2em;
+}
+
+#modalAdd p {
+  display: inline-flex;
+}
+
+#modalAdd p:nth-child(2) {
+  margin-left: 5em;
+}
+
+
+
+/* VENTANA MODAL-LOGIN */
+.opacity {
+  display: none;
+}
+
+#modalLogin {
+  color: rgb(16, 16, 16);
+  padding-top: 3em;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3.25rem;
+  margin-bottom: 0.7em;
+}
+
+#modalAdd {
+  background-color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  top: 0;
+  background-color: white;
+}
+
+.close-modal {
+  display: flex;
+  background-color: rgb(37, 36, 36);
+  width: 36px;
+  height: 36px;
+  float: right;
+}
+.close-modal i {
+  color: white;
+  padding-top: 0.7em;
+  padding-left: 0.9em;
+  position: absolute;
+}
+
+
+/* VENTANA MODAL-SING-UP */
 #sign-up {
   width: 100vw;
   height: 100vh;
@@ -165,35 +248,19 @@
   overflow: hidden;
   top: 0;
   background-color: white;
-  display: none;
+  text-align: center;
+  /* display: none;  */
 }
-
-#sign-up .close-modal {
-  border: 1px solid black;
-  color: white;
-  background-color: black;
-  padding: 1em;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-#sign-up #modalSignUp {
+#modalSignUp {
+  color: rgb(16, 16, 16);
+  padding-top: 3em;
   font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
-  font-size: 4.575rem;
-  text-align: center;
-  margin-top: 0.4em;
-  margin-bottom: 0.8em;
+  font-size: 3.25rem;
+  margin-bottom: 0.7em;
 }
-
 #sign-up p {
-  text-align: center;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: #8d8682;
-  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
 /* Slideshow */
@@ -575,33 +642,35 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* header */
-  #sidebar .social-networks {
-    margin: 5% 10%;
-  }
+  /* OCULTAR IMG DEL MENU MOBILE */
+ /* Header */
+ #sidebar .social-networks {
+  margin: 5% 10%;
+}
 
-  #sidebar .social-networks .fa-brands:not(:last-of-type) {
-    margin-right: 3em;
-  }
+#sidebar nav img {
+  width: 20px;
+  position: absolute;
+  top: 3.5em;
+  right: 3em;
+}
 
-  #sidebar .social-networks .fa-brands:first-of-type {
-    margin-left: 2em;
-  }
+#sidebar nav li:first-of-type{
+  margin-right: 5em;
+}
 
-  #sidebar nav img {
-    width: 20px;
-    position: absolute;
-    top: 3.5em;
-    right: 3em;
-  }
+#sidebar nav li:last-of-type{
+  margin-bottom: 2.5em;
+}
 
-  #sidebar nav li:first-of-type {
-    margin-right: 5em;
-  }
+#username,
+#password {
+width: auto;
+}
 
-  #sidebar nav li:last-of-type {
-    margin-bottom: 2.5em;
-  }
+#modalAdd p:nth-child(2) {
+  margin-left: 5em;
+}
   /* slideshow */
   #slideshow > div.slideText > p {
     opacity: 1;
@@ -673,26 +742,132 @@
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
   /* header */
-  #header #square {
-    opacity: 0;
-  }
+ /* OCULTAR IMG DEL MENU MOBILE */
 
-  #header{
-    width: 100%;
-    z-index: 10;
-    opacity: 1;
-    background-color: transparent;
-    position: absolute;
-    margin-top: -4em;
-  }
+ #header #square {
+  display: none;
+}
 
-  #mobile-header{
-    background-color: transparent;
-  }
+#sidebar nav img {
+  display: none;
+}
 
-  #mobile-header h1{
-    color: white;
-  }
+#header {
+  display: none;
+}
+
+/* TITULO */
+#desktop-header h1 {
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 2.375rem;
+  margin: 5%;
+}
+#desktop-header span {
+  color: var(--yellow);
+}
+
+.desktop-view {
+  opacity: 1;
+}
+
+/* MENU DERECHO */
+
+.desktop nav {
+  display: flex;
+  width: 30vw;
+  flex-wrap: wrap-reverse;
+}
+
+.desktop-view {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 4em;
+}
+
+/* LISTA */
+.desktop ul {
+  display: flex;
+  width: 30vw;
+  justify-content: space-around;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* BOTONES  */
+.desktop .buttons {
+  display: flex;
+  width: 15vw;
+  justify-content: right;
+  padding: 1.5em 0.5em;
+  padding-left: 5em;
+}
+.desktop button:hover {
+  color: rgb(25, 14, 14);
+  font-weight: bold;
+}
+
+.desktop button {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: var(--yellow);
+  padding: 0.6em 0.5em;
+  width: 15vw;
+}
+
+.desktop #btnlogin1 {
+  border-top-left-radius: 1.2em;
+  border-bottom-left-radius: 1.2em;
+  border-right: solid rgb(205, 201, 201) 0.5px;
+}
+.desktop #btnsignup1 {
+  border-top-right-radius: 1.2em;
+  border-bottom-right-radius: 1.2em;
+}
+
+/* SOCIAL NETWORKS */
+.desktop .social-networks {
+  display: flex;
+  width: 15vw;
+  padding-left: 2.5em;
+  margin-top: 2em;
+  font-size: 20px;
+}
+
+.desktop i {
+  padding-right: 1.1em;
+  color: white;
+}
+.desktop i:hover {
+  color: var(--yellow);
+}
+
+/* ENLACES */
+.desktop a {
+  text-decoration: none;
+  color: white;
+}
+
+.desktop a:hover {
+  color: var(--yellow);
+}
+
+#username,
+#password {
+width: auto;
+}
+
+#btn-sign-up {
+padding: 1em 2em;
+margin: 2em 2em;
+margin-right: 24em;
+}
+
+#modalAdd p:nth-child(2) {
+margin-left: 5em;
+}
 
   
   /* slideshow */

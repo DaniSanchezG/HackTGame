@@ -1,22 +1,59 @@
 window.addEventListener("load", () => {
   // Header
-  let sidebar = document.querySelector("#sidebar");
-  let close = document.querySelector(".close");
-  let menu = document.querySelector("#square");
-  let closeModal = document.querySelector(".close-modal");
-  let signUp = document.querySelector("#sign-up");
+    let sidebar = document.querySelector("#sidebar");
+    let close = document.querySelector(".close");
+    let menu = document.querySelector("#square")
+    let btnlogin = document.querySelector("#btnlogin");
+    let btnloginDesktop = document.querySelector("#btnlogin1");
+    let btnModal = document.querySelector("#modalAdd");
+    let closeModal = document.querySelectorAll(".close-modal");
+    let btnSignUp = document.querySelector("#btnsignup");
+    let btnSignUpDesktop = document.querySelector("#btnsignup1");
+    let signUpModal = document.querySelector("#sign-up");
+    
 
-  close.addEventListener("click", () => {
-    sidebar.style.width = "0";
-  });
+    // sidebar menu for mobile/tablet
+    close.addEventListener("click", () => {
+        sidebar.style.width = "0";
+    })
 
-  menu.addEventListener("click", () => {
-    sidebar.style.width = "65%";
-  });
+    menu.addEventListener("click", () => {
+        sidebar.style.width = "65%";
+    })
 
-  closeModal.addEventListener("click", () => {
-    signUp.style.display = "none";
-  });
+    // VENTANA MODAL LOGIN
+
+    btnlogin.addEventListener("click", (e) => {
+    btnModal.classList.toggle("opacity");
+    });
+
+    btnloginDesktop.addEventListener("click", (e) => {
+        btnModal.classList.toggle("opacity");
+    });
+  
+    closeModal[0].addEventListener("click", (e) => {
+    btnModal.classList.toggle("opacity");
+    });
+
+    // VENTANA MODAL SIGN UP
+
+    btnSignUp.addEventListener("click", (e) => {
+        //console.log("working open sign up");
+        signUpModal.classList.toggle("opacity");
+        signUpModal.style.display = "block";
+    });
+
+    btnSignUpDesktop.addEventListener("click", (e) => {
+        //console.log("working open sign up");
+        signUpModal.classList.toggle("opacity");
+        signUpModal.style.display = "block";
+        });
+
+    closeModal[1].addEventListener("click", (e) => {
+        //console.log("working close sign up");
+        signUpModal.classList.toggle("opacity");
+        signUpModal.style.display = "none";
+    });
 
   // Slideshow
 
@@ -41,9 +78,9 @@ window.addEventListener("load", () => {
   document.addEventListener("scroll", () => {
     console.log(window.scrollY);
     if (scroll >= window.scrollY) {
-      document.querySelector("#header").style.position = "fixed";
+      document.querySelector(".desktop-view").style.position = "fixed";
     } else {
-      document.querySelector("#header").style.position = "absolute";
+      document.querySelector(".desktop-view").style.position = "absolute";
     }
     scroll = window.scrollY - 1;
   });
