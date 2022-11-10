@@ -24,17 +24,14 @@
   outline: 0 none;
 }
 #players {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
   width: 100%;
+  padding: 1em;
 }
 #players .players-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 10px;
 }
 #players .p-header {
   width: 100%;
@@ -66,61 +63,75 @@
   margin-bottom: 1em;
   text-align: start;
 }
-#players .p-images {
+#players .p-container{
+  width: 100%;
+  display: block;
+  justify-content: space-around;
+}
+#players .img-players {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 1%;
-}
-#players .img-players {
+  box-shadow: 0px 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0px 8px 16px -8px rgba(0, 0, 0, 0.3);
   width: 100%;
-  margin: 5% 1%;
+  margin: 2em 0;
   position: relative;
+  overflow: hidden;
 }
+
 #players .card-img {
-  object-fit: cover;
-  object-position: center;
-  height: 100%;
   width: 100%;
-  box-shadow: 0 10px 10px #8888;
+  height: auto;
+  display: block;
 }
+
 #players .participants {
-  width: 8em;
-  height: 2.5em;
   background-color: var(--yellow);
-  color: var(--black);
-  text-align: center;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
   font-size: 1.5rem;
+  font-family: "Titillium Web", sans-serif;
+  padding: .5em 0;
+}
+#players .overlay{
   position: absolute;
-  top: 70%;
-  left: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
 }
-#players .img-players i {
-  font-size: 3rem;
-  color: var(--yellow);
-  /* opacity: 1; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-#players .img-players i:hover {
-  color: white;
-}
-#players .img-players:hover .card-img {
-  opacity: 0.5;
-  height: 100%;
+#players .img-players:hover .overlay{
   bottom: 0;
+  height: 100%;
 }
-#players .img-players:hover button {
-  opacity: 0;
+#players .overlay>div{
+  color: white;
+  font-size: 3.5rem;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 25%;
+  text-align: center;
+  transition: 0.5s ease;
+}
+#players .overlay>div:hover{
+  color: var(--yellow);
+}
+
+ #players .p-participants{
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  bottom: 5em;
+  left: 25%;
+  transition: 0.5s;
+}
+#players .img-players:hover .p-participants{
+  bottom: -100%;
 }
 /* Header */
 /* Slideshow */
@@ -141,8 +152,11 @@
 @media (min-width: 768px) {
   #players .img-players {
     width: 31.33%;
-    margin: 5% 1%;
     position: relative;
+  }
+  #players .p-container{
+    width: 100%;
+    display: flex !important;
   }
 
   /* Header */
@@ -153,60 +167,18 @@
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1440px) {
+@media (min-width: 1140px) {
   #players .img-players {
     width: 31.33%;
-    margin: 5% 1%;
     position: relative;
   }
-
+  #players .p-container{
+    width: 100%;
+    display: flex !important;
+  }
   /* Header */
   /* Slideshow */
   /* Players */
   /* Games */
   /* Footer */
 }
-
-/* .hvr-sweep-to-bottom {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.hvr-sweep-to-bottom:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2098d1;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-sweep-to-bottom:hover,
-.hvr-sweep-to-bottom:focus,
-.hvr-sweep-to-bottom:active {
-  color: white;
-}
-.hvr-sweep-to-bottom:hover:before,
-.hvr-sweep-to-bottom:focus:before,
-.hvr-sweep-to-bottom:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-} */
