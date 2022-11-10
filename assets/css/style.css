@@ -335,35 +335,30 @@
 }
 /* Players */
 #players {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
   width: 100%;
+  padding: 1em;
 }
-
 #players .players-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 10px;
 }
-
-#players .players-container .p-container .p-header {
-  width: 75%;
+#players .p-header {
+  width: 100%;
   display: block;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
   margin-bottom: 1em;
-  margin-left: 2.3em;
+  margin-left: 1em;
 }
-
-#players .players-container .p-container .p-header .p-black {
+#players .p-black {
   font-size: 2.5rem;
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
 }
-#players .players-container .p-container .p-header .p-yellow-text {
+#players .p-yellow-text {
   font-size: 2.5rem;
   color: var(--yellow);
   font-family: "Titillium Web", sans-serif;
@@ -371,73 +366,83 @@
   line-height: 0.5em;
   padding-bottom: 0.5em;
 }
-#players .players-container .p-container .lorem {
+#players .lorem {
   color: grey;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   line-height: 1.2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  text-align: start;
 }
-#players .players-container .p-container .p-images {
+#players .p-container{
+  width: 95%;
+  display: block;
+  justify-content: space-around;
+}
+#players .img-players {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 1%;
-  margin-left: 1em;
-}
-
-#players .players-container .p-container .p-images .img-players {
-  width: 95%;
-  margin: 5% 1%;
+  box-shadow: 0px 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0px 8px 16px -8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 2em 0;
   position: relative;
+  overflow: hidden;
 }
 
-#players .players-container .p-container .p-images .img-players .card-img {
-  object-fit: cover;
-  object-position: center;
-  height: 100%;
-  width: 95%;
-  box-shadow: 20px 20px 50px grey;
+#players .card-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-#players
-  .players-container
-  .p-container
-  .p-images
-  .img-players
-  .p-participants
-  .participants {
-  width: 8em;
-  height: 2.5em;
+#players .participants {
   background-color: var(--yellow);
-  color: var(--black);
-  text-align: center;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
   font-size: 1.5rem;
-  line-height: 1.2em;
-  position: absolute;
-  top: 70%;
-  left: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Titillium Web", sans-serif;
+  padding: .5em 0;
 }
-
-#players .players-container .p-container .p-images .img-players i {
-  font-size: 3rem;
-  color: var(--yellow);
-  opacity: 1;
+#players .overlay{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
 }
-
-#players .players-container .p-container .p-images .img-players i:hover {
+#players .img-players:hover .overlay{
+  bottom: 0;
+  height: 100%;
+}
+#players .overlay>div{
   color: white;
+  font-size: 3.5rem;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 25%;
+  text-align: center;
+  transition: 0.5s ease;
+}
+#players .overlay>div:hover{
+  color: var(--yellow);
+}
+
+ #players .p-participants{
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  bottom: 5em;
+  left: 25%;
+  transition: 0.5s;
+}
+#players .img-players:hover .p-participants{
+  bottom: -100%;
 }
 /* Games */
 #container-game {
@@ -684,21 +689,19 @@ width: auto;
   #slideshow > div.slideText > h1 {
     font-size: 4rem;
   }
+
+  #slideshow > div.slideText > p {
+    font-size: .8em;
+    margin-top: 5em;
+  }
   /* players */
-  #players .players-container .p-container .p-images .img-players {
+  #players .img-players {
     width: 31.33%;
-    margin: 5% 1%;
     position: relative;
-    /* max-width: 1440px; */
   }
-
-  #players > div > div > div.p-header{
-    /* margin-left: 3em !important; */
-    /* margin-top: 3em !important; */
-  }
-
-  #players > div > div > div.p-images > div > div > p{
-    font-size: 1em !important;
+  #players .p-container{
+    width: 95%;
+    display: flex !important;
   }
 
   /* games */
@@ -740,10 +743,18 @@ width: auto;
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
+
   /* header */
  /* OCULTAR IMG DEL MENU MOBILE */
 
+
+ .desktop{
+  display: block;
+  position: absolute;
+  margin-left: 525%;
+  float: right;
+}
  #header #square {
   display: none;
 }
@@ -770,6 +781,8 @@ width: auto;
 
 .desktop-view {
   opacity: 1;
+  position: absolute; 
+  z-index: 10;
 }
 
 /* MENU DERECHO */
@@ -880,22 +893,13 @@ margin-left: 5em;
     margin-top: 1em;
   }
   /* players */
-  #players .players-container .p-container .p-images .img-players {
+  #players .img-players {
     width: 31.33%;
-    margin: 5% 1%;
     position: relative;
   }
-  #players > div > div > div.p-header{
-    margin-left: 3em !important;
-    margin-top: 3em !important;
-  }
-
-  #players > div > div > div.p-images > div > div > p{
-    align-items: center;
-    justify-content: center;
-    margin-left: 1.5em !important;
-    font-size: 2rem !important;
-    left:15% !important;
+  #players .p-container{
+    width: 95%;
+    display: flex !important;
   }
   /* games */
   #carts {
@@ -919,5 +923,46 @@ margin-left: 5em;
   #footer {
     padding: 2em;
     font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .desktop{
+    display: block;
+    position: absolute;
+    margin-left: 500%;
+    float: right;
+  }
+}
+@media (min-width: 1600px) {
+  .desktop{
+    display: block;
+    position: absolute;
+    margin-left: 525%;
+    float: right;
+  }
+}
+@media (min-width: 1700px) {
+  .desktop{
+    display: block;
+    position: absolute;
+    margin-left: 550%;
+    float: right;
+  }
+}
+@media (min-width: 1800px) {
+  .desktop{
+    display: block;
+    position: absolute;
+    margin-left: 575%;
+    float: right;
+  }
+}
+@media (min-width: 1900px) {
+  .desktop{
+    display: block;
+    position: absolute;
+    margin-left: 600%;
+    float: right;
   }
 }
