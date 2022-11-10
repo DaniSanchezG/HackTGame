@@ -3,6 +3,8 @@
   --grey: #fcfcfd;
   --dark: #181818;
   --lightblack: #747474;
+  --darkwhite: #909093;
+  --white: #ffffff;
   box-sizing: border-box;
   font-size: 0.875rem;
   font-family: "Poppins", sans-serif;
@@ -23,14 +25,14 @@
   font-family: "Poppins", sans-serif;
   width: 100%;
   background-color: var(--grey);
-  padding: 1em 1em;
-  /* color: var(--dark); */
+  padding: 1em 2em;
+  max-width: 1140px;
+  margin: auto;
 }
 #game-title h1 {
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
-  /* font-size: 3.15rem; */
-  font-size: 3.37rem;
+  font-size: 3.29rem;
 }
 #game-title h1 span {
   color: var(--yellow);
@@ -40,55 +42,56 @@
   font-size: 1.2rem;
   padding-bottom: 2rem;
   color: var(--lightblack);
+  line-height: 1.3em;
 }
-#carts {
+#cards {
   width: 100%;
-  box-shadow: 20px 20px 50px grey;
   flex-direction: column;
   display: flex;
-
 }
-.game-cart {
+.game-cards {
   width: 100%;
-  
+  background-color: var(--white);
+  margin-bottom: 50px;
+  line-height: 1.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.game-cart h2 {
+.game-cards h2 {
   font-family: "Titillium Web", sans-serif;
   font-weight: 900;
   font-size: 1.71rem;
   padding: 0.4em 0.4em;
   color: var(--dark);
 }
-.game-cart h2:hover {
+.game-cards h2:hover {
   color: var(--yellow);
   opacity: 0.6;
   transition: 0.3s;
 }
-.game-cart .fa-display {
-  font-size: 1rem;
+.game-cards .fa-display {
+  /* font-size: 1rem; */
   padding-left: 0.8rem;
   padding-bottom: 1rem;
-  color: var(--dark);
 }
-.game-cart span {
+.game-cards span {
   font-weight: 900;
   font-size: 0.65rem;
   padding: 0.2em 0.4em;
   color: var(--lightblack);
 }
-.game-cart span:hover {
+.game-cards span:hover {
   color: var(--yellow);
   opacity: 0.6;
   transition: 0.3s;
 }
-.game-cart p {
+.game-cards p {
   padding: 0.2em 0.4em;
   color: var(--lightblack);
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   padding-bottom: 2rem;
 }
-.game-cart img {
+.game-cards img {
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -103,43 +106,31 @@
   /* Players */
   /* Games */
   /* Footer */
-  
-    
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #carts {
+  #cards {
     width: 100%;
-    box-shadow: 20px 20px 50px grey;
-    /* justify-content:space-around; */
-    /* margin-bottom: 4rem;
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-
   }
-  .game-cart{
+  .game-cards {
     width: 30%;
   }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1440px) {
-  #carts {
-    width: 100%;
-    box-shadow: 20px 20px 50px grey;
-    /* flex-direction: row; */
+@media (min-width: 992px) {
+  #cards {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .game-cart{
+  .game-cards {
     width: 30%;
   }
 }
